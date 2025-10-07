@@ -1,0 +1,8 @@
+.piece{
+  position:absolute;
+  width:var(--cell);
+  height:var(--cell);
+  transform: translate(var(--x,0px), var(--y,0px));
+  pointer-events:none;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.35));
+}
