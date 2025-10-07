@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividades Clase</title>
+</head>
+<body>
+
+<!-- Primer script necesita estos elementos -->
+<p id="movs"></p>
+<button id="btnMovs">Calcular Casillas</button>
+
+<!-- Botón para el turno -->
+<button id="btnFinTurno">Fin de Turno</button>
+<p id="estadoTurno"></p>
+
+<script>
+    // Script 1: cálculo de casillas
+    const movs = document.getElementById("movs");
+    const btnMovs = document.getElementById("btnMovs");
+
+    function calcularCasillas(){
+        const casillasTotales = 64;
+        const numJugadores = 2;
+        const porJugador = casillasTotales / numJugadores;
+
+        movs.textContent = `Cada jugador empieza controlando ${porJugador} casillas`;
+    }
+    btnMovs.addEventListener("click", calcularCasillas);
+</script>
+
+<script>
+    // Script 2: control de turnos
+    const btnFinTurno = document.getElementById("btnFinTurno");
+    const estadoTurno = document.getElementById("estadoTurno");
+
+    let turno = 0; // contador de turnos
+
+    function sumaTurno(){
+        turno++;
+        return turno;
+    }
+
+    function turnoActual(movimiento){
+        return movimiento % 2 === 0 ? "blancas" : "negras";
+    }
+
+    btnFinTurno.addEventListener("click", () => {
+        const numTurno = sumaTurno();
+        estadoTurno.textContent = `Turno ${numTurno}: juegan las ${turnoActual(numTurno)}`;
+    });
+
+    // Ejemplo inicial en consola
+    console.log(turnoActual(1)); // negras
+    console.log(turnoActual(2)); // blancas
+</script>
+
+</body>
+</html>
