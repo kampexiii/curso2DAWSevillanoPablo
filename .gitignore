@@ -1,15 +1,23 @@
-# crea .gitignore con contenido sugerido
 @"
 # JetBrains IDE
 .idea/
 
-# ficheros comprimidos / backups
+# Archivos de backup/comprimidos
 *.rar
 *.zip
+*.7z
 
-# xampp / phpstorm / node_modules
+# Sistema / OS
+.DS_Store
+Thumbs.db
+
+# Node / dependencias / vendor / entorno
 node_modules/
 vendor/
 .env
-.DS_Store
+
+# Logs y build
+*.log
+dist/
+build/
 "@ > .gitignore
