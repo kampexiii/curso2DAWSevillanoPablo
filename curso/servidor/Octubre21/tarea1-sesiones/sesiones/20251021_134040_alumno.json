@@ -1,0 +1,19 @@
+{
+    "ended_at": "2025-10-21T13:40:40+02:00",
+    "reason": "timeout",
+    "session_id": "dtv5t93erhnbtv0s8n953qa62u",
+    "user": {
+        "username": "alumno",
+        "login_at": 1761046744,
+        "ip": "::1",
+        "ua": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/141.0.0.0 Safari\/537.36"
+    },
+    "cookies": {
+        "PHPSESSID": "dtv5t93erhnbtv0s8n953qa62u",
+        "user_name": "alumno"
+    },
+    "server": {
+        "ip": "::1",
+        "ua": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/141.0.0.0 Safari\/537.36"
+    }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UT4 - Ejercicios 28-33</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .ejercicio {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .ejercicio h2 {
+            color: #0066cc;
+            margin-top: 0;
+        }
+        button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+        .resultado {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-left: 4px solid #0066cc;
+            display: none;
+        }
+        .resultado.activo {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>UT4 - Ejercicios JavaScript</h1>
+
+    <div class="ejercicio">
+        <h2>Ejercicio 28</h2>
+        <button onclick="ejecutarEjercicio(28)">Ejecutar Ejercicio 28</button>
+        <div id="resultado28" class="resultado"></div>
+    </div>
+
+    <div class="ejercicio">
+        <h2>Ejercicio 29</h2>
+        <button onclick="ejecutarEjercicio(29)">Ejecutar Ejercicio 29</button>
+        <div id="resultado29" class="resultado"></div>
+    </div>
+
+    <div class="ejercicio">
+        <h2>Ejercicio 30</h2>
+        <button onclick="ejecutarEjercicio(30)">Ejecutar Ejercicio 30</button>
+        <div id="resultado30" class="resultado"></div>
+    </div>
+
+    <div class="ejercicio">
+        <h2>Ejercicio 31</h2>
+        <button onclick="ejecutarEjercicio(31)">Ejecutar Ejercicio 31</button>
+        <div id="resultado31" class="resultado"></div>
+    </div>
+
+    <div class="ejercicio">
+        <h2>Ejercicio 32</h2>
+        <button onclick="ejecutarEjercicio(32)">Ejecutar Ejercicio 32</button>
+        <div id="resultado32" class="resultado"></div>
+    </div>
+
+    <div class="ejercicio">
+        <h2>Ejercicio 33</h2>
+        <button onclick="ejecutarEjercicio(33)">Ejecutar Ejercicio 33</button>
+        <div id="resultado33" class="resultado"></div>
+    </div>
+
+    <script>
+        function ejecutarEjercicio(num) {
+            // Ocultar todos los resultados
+            document.querySelectorAll('.resultado').forEach(r => r.classList.remove('activo'));
+            
+            // Mostrar el resultado correspondiente
+            const resultado = document.getElementById('resultado' + num);
+            resultado.classList.add('activo');
+            resultado.innerHTML = '<p>Cargando ejercicio ' + num + '...</p>';
+            
+            // Cargar el script dinámicamente
+            const script = document.createElement('script');
+            script.src = 'ut4Act' + num + 'Sevillano.js';
+            script.onerror = function() {
+                resultado.innerHTML = '<p style="color: red;">Error: No se pudo cargar ut4Act' + num + 'Sevillano.js</p>';
+            };
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>

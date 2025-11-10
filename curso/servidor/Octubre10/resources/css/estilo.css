@@ -1,0 +1,10 @@
+body { font-family: Arial; background: #f0f4f8; color: #000; margin: 30px; }
+h2 { color: #003366; }
+form { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2); max-width: 500px; }
+input[type=text], input[type=file] { width: 100%; padding: 6px; margin: 5px 0 15px 0; border: 1px solid #ccc; border-radius: 6px; }
+input[type=submit] { background: #003366; color: #f0e6d2; padding: 10px 15px; border: none; border-radius: 8px; cursor: pointer; }
+input[type=submit]:hover { background: #0055aa; }
+label { font-weight: bold; }
+.checkboxes { margin-bottom: 15px; }
+pre { background: #e6e6e6; padding: 10px; border-radius: 8px; }
+b { color: #003366; }
