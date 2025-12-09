@@ -1,0 +1,167 @@
+/*
+    estilo.css (COMPLETO Y REVISADO)
+    
+    Contiene la paleta de colores, el sistema de cuadrícula BÁSICO de Bootstrap 
+    y todas las clases de estilo de Tailwind del proyecto original.
+*/
+
+/* 1. CONFIGURACIÓN DE COLORES Y FUENTES PERSONALIZADAS */
+:root {
+    --color-primary: #027373; /* Teal oscuro */
+    --color-bg: #F2EFE4;    /* Fondo Crema */
+    --color-earth: #8C5B3E;   /* Marrón tierra */
+    --color-ink: #1B1B1B;     /* Texto principal */
+    --color-rose: #BF6060;
+    --color-coral: #D9857E;
+    --color-white: #FFFFFF;
+}
+
+/* --- ESTILOS BASE Y TIPOGRAFÍA --- */
+
+.body-base {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: 'Manrope', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.hero-title, .title-earth, .title-gtext, .title-cta-final { font-family: 'Marcellus', serif; }
+.hero-accent-text { font-family: 'Allura', cursive; }
+img { max-width: 100%; height: auto; display: block; }
+.text-xs { font-size: 0.75rem; }
+
+/* --- REGLAS DE CUADRÍCULA CRÍTICAS (PARA SIMULAR BOOTSTRAP) --- */
+.container {
+    width: 100%; padding-right: 1.5rem; padding-left: 1.5rem; margin-right: auto; margin-left: auto; max-width: 1200px;
+}
+.row {
+    display: flex; flex-wrap: wrap; margin-right: -0.75rem; margin-left: -0.75rem;
+}
+.col-md-3, .col-md-4, .col-md-6, .col-sm-6, .col-lg-4, .col-12 {
+    flex: 0 0 auto; width: 100%; padding-right: 0.75rem; padding-left: 0.75rem;
+}
+@media (min-width: 576px) { .col-sm-6 { width: 50%; } }
+@media (min-width: 768px) { 
+    .col-md-6 { width: 50%; }
+    .col-md-4 { width: 33.333333%; }
+    .col-md-3 { width: 25%; }
+}
+@media (min-width: 992px) { .col-lg-4 { width: 33.333333%; } }
+
+.d-flex { display: flex; }
+.justify-content-center { justify-content: center; }
+.justify-content-between { justify-content: space-between; }
+.align-items-start { align-items: flex-start; }
+.align-items-center { align-items: center; }
+.flex-wrap { flex-wrap: wrap; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.g-4 { gap: 1.5rem; }
+/* Espaciados */
+.mt-2 { margin-top: 0.5rem; } .mt-3 { margin-top: 0.75rem; } .mt-4 { margin-top: 1rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.py-5 { padding-top: 3rem; padding-bottom: 3rem; }
+@media (min-width: 768px) {
+    .py-md-5 { padding-top: 3rem; padding-bottom: 3rem; }
+}
+.p-4 { padding: 1rem; }
+
+/* 2. ESTILOS DE CONTENIDO Y COMPONENTES */
+
+/* AVISO SUPERIOR */
+.section-aviso { background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(4px); }
+.aviso-text { font-size: 0.875rem; color: var(--color-ink); opacity: 0.7; }
+
+/* TÍTULOS Y TEXTOS */
+.hero-title { margin-top: 1.5rem; font-size: 3rem; line-height: 1.25; color: var(--color-ink); }
+@media (min-width: 768px) { .hero-title { font-size: 4rem; } }
+.hero-subtitle { margin-top: 1rem; font-size: 1.125rem; color: var(--color-ink); opacity: 0.8; }
+.hero-accent-text { margin-top: 1.5rem; font-size: 1.5rem; color: var(--color-ink); opacity: 0.6; }
+.title-earth { font-family: 'Marcellus', serif; font-size: 1.875rem; font-weight: 700; color: var(--color-earth); }
+.title-cta-final { font-size: 2.5rem; color: var(--color-earth); }
+@media (min-width: 768px) { .title-earth { font-size: 2.25rem; } .title-cta-final { font-size: 3rem; } }
+.text-body { color: var(--color-ink); opacity: 0.8; }
+.text-body-lg { font-size: 1.125rem; color: var(--color-ink); opacity: 0.85; }
+.text-body-sm { font-size: 0.875rem; color: var(--color-ink); opacity: 0.6; }
+
+.title-card-small { font-family: 'Marcellus', serif; font-size: 1.25rem; color: var(--color-ink); }
+.text-card-small { font-size: 0.9375rem; color: var(--color-ink); opacity: 0.75; }
+.text-card-xs { font-size: 0.8rem; color: var(--color-ink); opacity: 0.7; }
+.hover-underline:hover { text-decoration: underline; }
+
+/* ICONOS */
+.icon-primary { width: 1.5rem; height: 1.5rem; color: var(--color-primary); }
+.icon-primary-lg { width: 1.75rem; height: 1.75rem; color: var(--color-primary); }
+.icon-heart-animated { width: 2rem; height: 2rem; color: var(--color-primary); animation: beat 2.2s ease-in-out infinite; }
+@keyframes beat { 0%,100% { transform: scale(1) } 50% { transform: scale(1.08) } }
+
+/* BOTONES (Incluye btn-secondary-custom y btn-primary-shine) */
+.btn-primary-shine {
+    display: inline-block; padding: 0.75rem 1.5rem; border-radius: 1.25rem; 
+    background-color: var(--color-primary); color: var(--color-white); font-weight: 600;
+    text-decoration: none; transition: filter 0.3s; position: relative;
+    overflow: hidden; box-shadow: 0 0 24px rgba(2, 115, 115, 0.25);
+}
+.btn-primary-shine:hover { filter: brightness(1.1); }
+.btn-secondary-custom {
+    display: inline-block; padding: 0.75rem 1.5rem; border-radius: 1.25rem;
+    border: 1px solid rgba(2, 115, 115, 0.3); color: var(--color-primary);
+    text-decoration: none; transition: background-color 0.3s; font-weight: 600; cursor: default;
+}
+.btn-secondary-custom:hover { background-color: rgba(2, 115, 115, 0.1); }
+.btn-primary-small {
+    padding: 0.5rem 1rem; border-radius: 0.75rem; background-color: var(--color-primary); color: var(--color-white); font-weight: 600; border: none;
+}
+.footer-input {
+    padding: 0.5rem 0.75rem; border-radius: 0.75rem; border: 1px solid rgba(2, 115, 115, 0.3);
+    background-color: rgba(255, 255, 255, 0.7); font-size: 0.875rem;
+}
+
+/* TARJETAS Y ETIQUETAS (TAGS) */
+.card-base {
+    border-radius: 1.25rem; background-color: var(--color-white); padding: 1.5rem;
+    border: 1px solid rgba(2, 115, 115, 0.15); transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    position: relative; /* Necesario para la posición de la etiqueta y el hover */
+}
+.card-base:hover { transform: translateY(-4px); border-color: rgba(2, 115, 115, 0.35); box-shadow: 0 18px 38px rgba(2, 115, 115, 0.18); }
+.card-img-wrapper { border-radius: 0.75rem; overflow: hidden; }
+.card-tag {
+    position: absolute; top: 0.75rem; left: 0.75rem; font-size: 0.6875rem; padding: 0.125rem 0.5rem; border-radius: 9999px;
+    background-color: rgba(2, 115, 115, 0.1); color: var(--color-primary);
+}
+.card-energy { background-color: rgba(255, 255, 255, 0.85); } /* Ligeramente más transparente */
+
+/* TAGS de CONEXIONES/FOOTER */
+.tag-primary { font-size: 0.75rem; padding: 0.125rem 0.5rem; border-radius: 9999px; background-color: rgba(2, 115, 115, 0.1); color: var(--color-primary); }
+.tag-primary-small { font-size: 0.625rem; padding: 0.125rem 0.5rem; border-radius: 9999px; background-color: rgba(2, 115, 115, 0.1); color: var(--color-primary); }
+.tag-rose { font-size: 0.75rem; padding: 0.125rem 0.5rem; border-radius: 9999px; background-color: rgba(191, 96, 96, 0.1); color: var(--color-ink); opacity: 0.8; }
+.tag-coral { font-size: 0.75rem; padding: 0.125rem 0.5rem; border-radius: 9999px; background-color: rgba(217, 133, 126, 0.1); color: var(--color-ink); opacity: 0.8; }
+
+/* FOOTER */
+.footer-base { border-top: 1px solid rgba(2, 115, 115, 0.2); background-color: rgba(255, 255, 255, 0.8); }
+.footer-logo { height: 2rem; }
+.footer-text { font-size: 0.875rem; color: var(--color-ink); opacity: 0.7; }
+.footer-links { margin-top: 1rem; list-style: none; padding: 0; line-height: 1.8; font-size: 0.875rem; color: var(--color-ink); opacity: 0.75; }
+.footer-notice { font-size: 0.75rem; color: var(--color-ink); opacity: 0.6; }
+.footer-bottom { border-top: 1px solid rgba(2, 115, 115, 0.1); }
+.title-earth-small { font-family: 'Marcellus', serif; font-size: 1.125rem; color: var(--color-earth); }
+
+
+/* 3. CSS PURO PARA EFECTOS COMPLEJOS (ANIMACIONES Y FONDOS) */
+
+.bg-grid { background-image: radial-gradient(circle at 1px 1px, rgba(2,115,115,.08) 1px, transparent 0); background-size: 22px 22px; position: absolute; inset: 0; opacity: 0.4; pointer-events: none; z-index: 0; }
+.shine::after, .btn-primary-shine::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent); animation: shine-move 2.8s ease-in-out infinite; border-radius: inherit; }
+@keyframes shine-move { 0% {transform: translateX(-120%)} 100% {transform: translateX(120%)} }
+.shine { position: relative; overflow: hidden; }
+.hero-bg-static { position: relative; }
+.hero-bg-static::before {
+    content: ""; position: absolute; inset: -10%; background: radial-gradient(50rem 40rem at 50% 10%, rgba(2,115,115,.1), transparent 60%); filter: blur(30px); pointer-events: none; z-index: 0; opacity: .9;
+}
+.twinkles { position: absolute; inset: 0; pointer-events: none; z-index: 1; opacity: .25; background-image: radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,.9), transparent 40%), radial-gradient(2px 2px at 40% 70%, rgba(255,255,255,.9), transparent 40%), radial-gradient(2px 2px at 65% 25%, rgba(255,255,255,.9), transparent 40%); }
+.gtext { background: linear-gradient(90deg, var(--color-primary) 0%, #D9857E 50%, var(--color-earth) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }

@@ -1,1 +1,0 @@
-Imágenes opcionales del dashboard.

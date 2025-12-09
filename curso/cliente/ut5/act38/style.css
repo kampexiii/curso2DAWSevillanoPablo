@@ -1,0 +1,36 @@
+/* estilos generales */
+body { font-family: Arial; background: #f8f8f8; padding: 20px; }
+form { background: #fff; padding: 20px; border-radius: 10px; width: 300px; box-shadow: 0 0 5px #ccc; }
+label { display: block; margin-top: 10px; }
+input { width: 100%; padding: 6px; margin-top: 4px; }
+p.error { color: red; font-size: 0.9em; height: 1.2em; margin: 2px 0 0 0; }
+button { margin-top: 15px; width: 100%; padding: 8px; background: #333; color: white; border: none; cursor: pointer; }
+button:hover { background: #555; }
+#mensajeExito { color: green; font-weight: bold; margin-top: 10px; }
+
+/* --- Ajustes específicos para el fieldset de "color" --- */
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-top: 15px;
+}
+
+legend {
+  font-weight: bold;
+  color: #333;
+  padding: 0 5px;
+}
+
+/* Evitar que los radios hereden el ancho completo */
+fieldset label {
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: normal;
+}
+
+fieldset input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+  vertical-align: middle;
+}

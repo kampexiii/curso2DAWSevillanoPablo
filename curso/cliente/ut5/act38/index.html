@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplos prácticos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form id="formTorneo" novalidate>
+  <label>Jugador Blancas:</label>
+  <input type="text" id="jugadorBlancas">
+  <p class="error" id="errBlancas"></p>
+
+  <label>Jugador Negras:</label>
+  <input type="text" id="jugadorNegras">
+  <p class="error" id="errNegras"></p>
+
+  <fieldset>
+    <legend>Color elegido:</legend>
+    <label><input type="radio" name="color" value="blancas"> Blancas</label>
+    <label><input type="radio" name="color" value="negras"> Negras</label>
+    <p class="error" id="errColor"></p>
+  </fieldset>
+
+  <label>Resultado:</label>
+  <select id="resultado">
+    <option value="">Selecciona</option>
+    <option value="Ganan blancas">Ganan blancas</option>
+    <option value="Ganan negras">Ganan negras</option>
+    <option value="Tablas">Tablas</option>
+  </select>
+  <p class="error" id="errResultado"></p>
+
+  <label>Email:</label>
+  <input type="email" id="email">
+  <p class="error" id="errEmail"></p>
+
+  <label>Fecha de partida:</label>
+  <input type="date" id="fecha">
+  <p class="error" id="errFecha"></p>
+
+  <label>Comentario:</label>
+  <textarea id="comentario" maxlength="200"></textarea>
+  <p class="error" id="errComentario"></p>
+
+  <button type="submit">Registrar Partida</button>
+</form>
+
+<p id="mensajeFinal"></p>
+
+	
+	<script src="script.js"></script>
+</body>
+</html>

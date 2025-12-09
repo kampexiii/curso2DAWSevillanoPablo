@@ -1,1 +1,0 @@
-Pon tu logo aquí como 'logo.png'.

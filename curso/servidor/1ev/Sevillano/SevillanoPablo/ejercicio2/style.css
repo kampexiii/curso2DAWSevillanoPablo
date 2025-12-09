@@ -1,0 +1,185 @@
+:root {
+    --primary: #4CAF50;
+    --secondary: #2196F3;
+    --warning: #FF9800;
+    --danger: #f44336;
+    --muted: #607D8B;
+    --bg: #f5f5f5;
+    --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--bg);
+    color: #333;
+}
+
+a { color: var(--secondary); text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+
+.layout, .container {
+    background-color: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border: 1px solid #e6e6e6;
+}
+
+h1 {
+    color: #333;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+h2 {
+    color: var(--primary);
+    margin: 20px 0 8px;
+}
+h3 {
+    color: var(--secondary);
+    margin: 0 0 8px;
+}
+p {
+    color: #444;
+    margin: 0 0 12px;
+}
+.muted { color: var(--muted); }
+
+.actions, .button-container, .menu {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px 0 10px;
+}
+.actions {
+    padding: 12px;
+    background: #eef7f1;
+    border: 1px solid #d4ead9;
+    border-radius: 6px;
+}
+
+.btn, .actions a, .menu a, button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    background-color: #e0e0e0;
+    color: #222;
+}
+.btn:hover, .actions a:hover, .menu a:hover, button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.btn-create { background-color: var(--primary); color: white; }
+.btn-insert { background-color: var(--secondary); color: white; }
+.btn-select { background-color: var(--warning); color: white; }
+.btn-update { background-color: #9C27B0; color: white; }
+.btn-drop { background-color: var(--danger); color: white; }
+.btn-refresh { background-color: var(--muted); color: white; }
+button { background-color: var(--primary); color: white; }
+
+.card {
+    background-color: var(--card);
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-top: 12px;
+}
+
+form { display: grid; gap: 12px; margin-top: 8px; }
+label { font-weight: 600; color: #222; }
+input, select {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #222;
+    width: 100%;
+}
+input:focus, select:focus {
+    border-color: var(--secondary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.15);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: var(--primary);
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.message {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid var(--secondary);
+    margin: 16px 0;
+    color: #0e3c7c;
+}
+.message.ok {
+    background-color: #d7f9e7;
+    color: #23682b;
+    border-color: var(--primary);
+}
+.message.error {
+    background-color: #ffe0e0;
+    color: #a20d0d;
+    border-color: var(--danger);
+}
+
+.info-box {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #2196F3;
+    margin: 20px 0;
+}
+.warning-box {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #ffc107;
+    margin: 20px 0;
+}
+.status-badge {
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: #d7f9e7;
+    color: #23682b;
+    border: 1px solid #b2dfbd;
+}
+.status-badge.off {
+    background-color: #ffe0e0;
+    color: #a20d0d;
+    border-color: #f5b7b7;
+}
+
+iframe {
+    display: none;
+}

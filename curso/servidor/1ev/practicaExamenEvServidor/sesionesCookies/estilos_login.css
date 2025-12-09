@@ -1,0 +1,114 @@
+/* Estilos generales para el login */
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+    background-color: #f5f5f5;
+}
+
+/* Contenedor principal del formulario */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Agrupación de elementos del formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Etiquetas del formulario */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Campos de texto y contraseña */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+/* Efecto hover en campos de entrada */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* Grupo del checkbox */
+.checkbox-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Botón de envío */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Efecto hover en el botón */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Efecto activo en el botón */
+button:active {
+    background-color: #004085;
+}
+
+/* Mensaje de error */
+.mensaje-error {
+    color: #d32f2f;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffebee;
+    border-radius: 3px;
+    border-left: 4px solid #d32f2f;
+}
+
+/* Mensaje informativo */
+.mensaje-info {
+    color: #1976d2;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-radius: 3px;
+    border-left: 4px solid #1976d2;
+}

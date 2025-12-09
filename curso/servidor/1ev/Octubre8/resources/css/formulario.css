@@ -1,0 +1,110 @@
+/*
+    formulario.css (Estilo específico para el formulario)
+    Octubre 2025 — Viaje de Regreso
+*/
+
+/* WRAPPER DEL FORMULARIO */
+.formulario-wrapper {
+    background-color: var(--color-white);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.formulario-wrapper:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+}
+
+/* TÍTULOS */
+.seccion-titulo {
+    font-family: 'Marcellus', serif;
+    font-size: 2rem;
+    color: var(--color-ink);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.subtitulo-formulario {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* FORM ELEMENTS */
+.formulario-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulario-wrapper input,
+.formulario-wrapper select,
+.formulario-wrapper textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(2, 115, 115, 0.25);
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9375rem;
+    color: var(--color-ink);
+    background-color: rgba(255,255,255,0.9);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario-wrapper input:focus,
+.formulario-wrapper select:focus,
+.formulario-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 12px rgba(2,115,115,0.2);
+}
+
+/* PLACEHOLDERS */
+.formulario-wrapper ::placeholder {
+    color: rgba(0,0,0,0.45);
+    font-style: italic;
+}
+
+/* BOTÓN DE ENVÍO */
+.formulario-wrapper button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.formulario-wrapper button:hover {
+    background-color: #006f7a;
+    transform: translateY(-2px);
+}
+
+/* MENSAJES DE ERROR / ÉXITO */
+.formulario-wrapper .form-message {
+    font-size: 0.875rem;
+    color: var(--color-rose);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+.formulario-wrapper .form-message.success {
+    color: var(--color-primary);
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .formulario-wrapper {
+        padding: 3rem;
+    }
+    .seccion-titulo {
+        font-size: 2.25rem;
+    }
+    .subtitulo-formulario {
+        font-size: 1.125rem;
+    }
+}
