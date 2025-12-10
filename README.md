@@ -43,8 +43,11 @@ Desarrollo backend utilizando PHP nativo y el framework Laravel.
 
 Ejercicios introductorios y avanzados de Python.
 
-- Módulos, funciones y estructuras de control.
-- Exámenes y prácticas de lógica.
+- **UT1_Introduccion**: Operaciones básicas y menús interactivos.
+- **UT2_Control_Flujo**: Condicionales, bucles, excepciones y validación de datos.
+- **UT3_Funciones_Modulos**: Definición de funciones, argumentos, tipado y modularización.
+- **UT4_Varios**: Pruebas y ejercicios misceláneos.
+- **Exámenes**: Pruebas prácticas de lógica y programación.
 
 ## Tecnologías
 
