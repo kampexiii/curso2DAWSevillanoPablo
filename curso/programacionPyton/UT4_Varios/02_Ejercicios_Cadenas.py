@@ -4,12 +4,12 @@
 # Ejercicio 1 (Sebastian Becerra)
 # -----------------------------------------------------------------------------
 """
-Modifica la cadena “               este ejercicio es muy complicado            ”
-para que el ejercicio sea facilísimo y cada una de las palabras comience en
-mayúsculas y sin espacios y luego imprimelo invertido, ademas busca el indice
+Modifica la cadena “               este ejercicio es muy complicado            ” 
+para que el ejercicio sea facilísimo y cada una de las palabras comience en 
+mayúsculas y sin espacios y luego imprimelo invertido, ademas busca el indice 
 de la palabra complicado.
 """
-# Tu solución aquí:
+solucion:
 
 
 # -----------------------------------------------------------------------------
@@ -19,7 +19,7 @@ de la palabra complicado.
 Vamos a definir una cadena y la vamos a pasar a minúsculas, eliminar los espacios
 y las letras pares las vamos a cambiar por asteriscos
 """
-# Tu solución aquí:
+solucion:
 
 
 # -----------------------------------------------------------------------------
@@ -39,7 +39,7 @@ El programa debe:
 - Mostrar un informe final indicando las palabras encontradas en cada categoría
   y cuántas hay en cada una.
 """
-# Tu solución aquí:
+solucion:
 
 
 # -----------------------------------------------------------------------------
@@ -49,7 +49,7 @@ El programa debe:
 Crea una función que reciba un argumento string y compruebe si todos los 
 caracteres son mayúsculas
 """
-# Tu solución aquí:
+solucion:
 
 
 # -----------------------------------------------------------------------------
@@ -60,7 +60,7 @@ A través de una función, introduciendo una cadena por parámetro, devolver la
 longitud, devolver la cadena en minúsculas y devolver las ultimas 5 letras de 
 la cadena.
 """
-# Tu solución aquí:
+solucion:
 
 
 # -----------------------------------------------------------------------------
@@ -72,7 +72,7 @@ comprobar que el correo introducido por el usuario contenga “@” y acabe en
 “.com” o “.es”. Además, el usuario solo tendrá tres oportunidades para validar 
 el correo.
 """
-# Tu solución aquí:
+solucion:
 
 
 # -----------------------------------------------------------------------------
@@ -83,7 +83,7 @@ Pedir por teclado una cadena de texto y “analizarla” con distintas funciones
 Deberá contar la longitud total, contar las letras (mirar str.isaplha()), 
 contar los números, contar los caracteres especiales y contar los espacios
 """
-# Tu solución aquí:
+solucion:
 
 
 # -----------------------------------------------------------------------------
@@ -101,7 +101,7 @@ Muestre:
 - Verifique si la frase empieza con una vocal (startswith()).
 - Muestre cuántas palabras tiene la frase (split()).
 """
-# Tu solución aquí:
+solucion:
 
 
 # -----------------------------------------------------------------------------
@@ -118,7 +118,7 @@ Modulen pls
 
 frase = "Estoy estudiando Python y no quiero suspender"
 """
-# Tu solución aquí:
+solucion:
 
 
 # -----------------------------------------------------------------------------
@@ -129,7 +129,7 @@ Recibir dos cadenas de caracteres y contar sus vocales para después sumarlas.
 por otra parte combinar las dos cadenas y remplazar cada carácter que este en 
 una posición impar por una “C”.
 """
-# Tu solución aquí:
+solucion:
 
 
 # -----------------------------------------------------------------------------
@@ -144,61 +144,27 @@ La función debe devolver True si el DNI es válido y False si no lo es.
 Después, probar la función con varios DNIs.
 """
 
-
 def validar_dni(dni):
-    """
-    Valida si un DNI es correcto.
-    El DNI debe tener 8 números y 1 letra.
-    La letra debe coincidir con la fórmula: número % 23.
-    """
-    # Letras del DNI ordenadas según el resto de la división por 23
-    letras_dni = "TRWAGMYFPDXBNJZSQVHLCKE"
-
-    # Convertir a mayúsculas y eliminar espacios por si acaso
-    dni = dni.strip().upper()
-
-    # Comprobar longitud (debe ser 9 caracteres: 8 números + 1 letra)
+    letras = "TRWAGMYFPDXBNJZSQVHLCKE"
+    dni = dni.upper().strip()
+    
+    # Comprobamos longitud
     if len(dni) != 9:
         return False
-
-    # Separar número y letra
-    numero_str = dni[:-1]
+        
+    numero = dni[:-1]
     letra = dni[-1]
+    
+    # Si son numeros y la letra es correcta
+    if numero.isdigit() and letras[int(numero) % 23] == letra:
+        return True
+        
+    return False
 
-    # Comprobar que los primeros 8 caracteres son dígitos
-    if not numero_str.isdigit():
-        return False
-
-    # Comprobar que el último caracter es una letra
-    if not letra.isalpha():
-        return False
-
-    # Calcular la letra correcta
-    numero = int(numero_str)
-    resto = numero % 23
-    letra_correcta = letras_dni[resto]
-
-    # Comparar letra calculada con la letra proporcionada
-    return letra == letra_correcta
-
-
-# Pruebas de la función (Solo se ejecutan si se corre este script directamente)
+# Pruebas
 if __name__ == "__main__":
-    print("\n--- Probando validador de DNI (Ejercicio 11) ---")
-
-    dnis_prueba = [
-        "12345678Z",  # DNI válido (ejemplo teórico)
-        "00000000T",  # DNI válido (0 % 23 = 0 -> T)
-        "12345678A",  # Letra incorrecta
-        "1234567A",  # Longitud incorrecta
-        "123456789",  # Sin letra
-        "ABCDEFGHZ",  # Sin números
-    ]
-
-    for dni in dnis_prueba:
-        es_valido = validar_dni(dni)
-        estado = "VÁLIDO" if es_valido else "INVÁLIDO"
-        print(f"DNI: {dni} -> {estado}")
+    print(validar_dni("12345678Z")) # True
+    print(validar_dni("12345678A")) # False
 
 
 # -----------------------------------------------------------------------------
@@ -211,4 +177,4 @@ de numeros y el numero de espacios.
 La funcion debe devolver un string con el siguiente formato:
 "tienes X letras, Y numeros y Z espacios"
 """
-# Tu solución aquí:
+solucion:
