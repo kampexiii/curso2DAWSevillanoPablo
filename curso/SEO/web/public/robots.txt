@@ -1,0 +1,19 @@
+# ROBOTS.TXT
+# Este archivo es el portero de la discoteca.
+# Le dice a los buscadores (Googlebot, Bingbot, etc.) dónde pueden entrar y dónde NO.
+
+# En la exposición: muestro este archivo para explicar que User-agent:* significa todos los buscadores y que aquí podemos permitir o bloquear zonas de la web
+User-agent: *
+# "User-agent: *" significa que estas reglas aplican a TODOS los robots.
+
+Allow: /
+# "Allow: /" significa que permito rastrear toda la web por defecto.
+
+Disallow: /admin/
+# "Disallow" prohíbe el paso. Aquí estoy protegiendo mi carpeta de administración
+# para que no aparezca en los resultados de búsqueda. ¡Seguridad y privacidad!
+
+Sitemap: https://pixelverde.test/sitemap.xml
+# Aquí le dejo una tarjeta de visita al robot diciéndole dónde está mi mapa del sitio.
+# Así le facilito el trabajo de encontrar todas mis páginas.
+
